@@ -17,7 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-respCreateUser = WS.sendRequest(findTestObject('users/POST_createUser'))
+respLogin = WS.sendRequest(findTestObject('auth/POST_login_emptyEmailAndPassword'))
 
-WS.verifyResponseStatusCode(respCreateUser, 201)
+WS.verifyResponseStatusCode(respLogin, 400)
+
+WS.verifyElementPropertyValue(respLogin, 'error', 'Missing email or username')
 

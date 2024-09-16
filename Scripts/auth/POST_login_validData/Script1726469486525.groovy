@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-respDeleteUser = WS.sendRequest(findTestObject('users/DELETE_deleteUser'))
+respLogin = WS.sendRequest(findTestObject('auth/POST_login_validData'))
 
-WS.verifyResponseStatusCode(respDeleteUser, 204)
+WS.verifyResponseStatusCode(respLogin, 200)
 

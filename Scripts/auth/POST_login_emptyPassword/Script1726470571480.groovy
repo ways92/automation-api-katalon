@@ -17,7 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-respDeleteUser = WS.sendRequest(findTestObject('users/DELETE_deleteUser'))
+respLoginEmptyPassword = WS.sendRequest(findTestObject('auth/POST_login_emptyPassword'))
 
-WS.verifyResponseStatusCode(respDeleteUser, 204)
+WS.verifyResponseStatusCode(respLoginEmptyPassword, 400)
+
+WS.verifyElementPropertyValue(respLoginEmptyPassword, 'error', 'Missing password')
 

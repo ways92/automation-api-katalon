@@ -17,7 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-respDeleteUser = WS.sendRequest(findTestObject('users/DELETE_deleteUser'))
+respCreateUser = WS.sendRequest(findTestObject('users/POST_createUser'))
 
-WS.verifyResponseStatusCode(respDeleteUser, 204)
+WS.verifyResponseStatusCode(respCreateUser, 201)
+
+WS.verifyElementPropertyValue(respCreateUser, 'name', GlobalVariable.name)
+
+WS.verifyElementPropertyValue(respCreateUser, 'job', GlobalVariable.job)
 

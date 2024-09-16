@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>POST_register_validData</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9a07ccde-1fc0-4f84-ac4c-30f331e8961f</testCaseGuid>
+</TestCaseEntity>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>POST_createUser</name>
+   <name>POST_login_validData</name>
    <tag></tag>
-   <elementGuidId>062814a5-1b62-4a30-8cf3-42f34084be2a</elementGuidId>
+   <elementGuidId>823ffcf3-f76c-446c-8bbc-2fe2b8f7aa82</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <autoUpdateContent>true</autoUpdateContent>
@@ -15,12 +15,12 @@
   &quot;charset&quot;: &quot;UTF-8&quot;,
   &quot;parameters&quot;: [
     {
-      &quot;name&quot;: &quot;name&quot;,
-      &quot;value&quot;: &quot;${GlobalVariable.name}&quot;
+      &quot;name&quot;: &quot;email&quot;,
+      &quot;value&quot;: &quot;eve.holt@reqres.in&quot;
     },
     {
-      &quot;name&quot;: &quot;job&quot;,
-      &quot;value&quot;: &quot;${GlobalVariable.job}&quot;
+      &quot;name&quot;: &quot;password&quot;,
+      &quot;value&quot;: &quot;cityslicka&quot;
     }
   ]
 }</httpBodyContent>
@@ -31,13 +31,13 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/x-www-form-urlencoded</value>
-      <webElementGuid>e8e6df1f-78cc-4bf6-bf47-e7bdace24d61</webElementGuid>
+      <webElementGuid>4ddd5e24-438e-45c1-8528-d647e2916a59</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.6.6</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.baseUrl}/api/users</restUrl>
+   <restUrl>${GlobalVariable.baseUrl}/api/login</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

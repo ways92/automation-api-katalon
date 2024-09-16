@@ -17,7 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-respDeleteUser = WS.sendRequest(findTestObject('users/DELETE_deleteUser'))
+respRegister = WS.sendRequest(findTestObject('auth/POST_register_emptyEmail'))
 
-WS.verifyResponseStatusCode(respDeleteUser, 204)
+WS.verifyResponseStatusCode(respRegister, 400)
+
+WS.verifyElementPropertyValue(respRegister, 'error', 'Missing email or username')
 
