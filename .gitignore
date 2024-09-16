@@ -16,3 +16,56 @@ build
 .project
 
 .cache
+
+# Logs
+.log/
+*.log
+
+# Bin and Lib directories (Generated files)
+bin/
+Libs/
+
+# Report directories (Generated reports)
+Reports/
+
+# Temp files and folders
+.temp/
+.settings/
+.DS_Store
+*.class
+*.swp
+*.swo
+
+# Operating System specific
+Thumbs.db
+.DS_Store
+
+# Katalon specific files
+.classpath
+.project
+.settings/
+target/
+build/
+bin/
+Libs/
+Test Listeners/
+Test Suite Collection/
+Test Suite/
+
+# Exclude Katalon Execution Properties
+/Libs/
+/settings/internal/com.kms.katalon.execution.properties
+
+# Exclude screenshots and execution logs
+/screenshots/
+/execution.properties
+/execution0.properties
+/execution.uuid
+/katalon.properties
+
+# Katalon execution runtime
+/.classpath
+/.project
+
+# Katalon Logs
+.log/
